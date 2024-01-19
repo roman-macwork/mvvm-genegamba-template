@@ -1,0 +1,21 @@
+
+import Foundation
+
+protocol {{ module_info.name }}ViewModelProtocol {
+    func viewLoaded()
+}
+
+final class {{ module_info.name }}ViewModel {
+    
+    weak var view: {{ module_info.name }}ViewControllerProtocol?
+    
+}
+
+//MARK: - {{ module_info.name }}ViewModelProtocol
+extension {{ module_info.name }}ViewModel: {{ module_info.name }}ViewModelProtocol {
+    
+    func viewLoaded() {
+        view?.setupInitialState()
+    }
+    
+}

@@ -1,0 +1,18 @@
+
+import UIKit
+
+final class {{ module_info.name }}ModuleConfigurator {
+
+    // MARK: - Instantiate module
+    static func instantiateModule() -> {{ module_info.name }}ViewController {
+      	let controller: {{ module_info.name }}ViewController = {{ module_info.name }}ViewController.loadFromNib()
+        let viewModel = {{ module_info.name }}ViewModel()
+
+        viewModel.view = controller
+        controller.viewModel = viewModel
+
+        return controller
+    }
+    
+}
+

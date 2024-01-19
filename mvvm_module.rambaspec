@@ -1,0 +1,22 @@
+# Template information section
+name: "mvvm_module"
+summary: ""
+author: "Raman"
+version: "1.0.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# Configurator
+- {name: Configurator/ModuleConfigurator.swift, path: Code/Configurator/module_configurator.swift.liquid}
+
+# Model layer
+- {name: Model/ }
+
+# View layer
+- {name: View/ViewController.swift, path: Code/View/view_controller.swift.liquid}
+- {name: View/ViewController.xib, path: Code/View/view_controller.xib.liquid}
+
+# ViewModel layer
+- {name: ViewModel/ViewModel.swift, path: Code/ViewModel/viewModel.swift.liquid}
