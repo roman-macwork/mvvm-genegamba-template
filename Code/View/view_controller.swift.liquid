@@ -1,10 +1,6 @@
 
 import UIKit
 
-protocol {{ module_info.name }}ViewControllerProtocol: class {
-    func setupInitialState()
-}
-
 final class {{ module_info.name }}ViewController: UIViewController {
     
     var viewModel: {{ module_info.name }}ViewModelProtocol?
@@ -12,15 +8,14 @@ final class {{ module_info.name }}ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel?.viewLoaded()
+        setupInitialState()
     }
 
 }
 
-// MARK: - {{ module_info.name }}ViewControllerProtocol
-extension {{ module_info.name }}ViewController: {{ module_info.name }}ViewControllerProtocol {
+extension {{ module_info.name }}ViewController {
     
-    func setupInitialState() {
+    private func setupInitialState() {
 
     }
     
